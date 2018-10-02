@@ -8,7 +8,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import NavTabs from "./components/NavTabs";
 import Login from './components/Login'
 
-//import PrivateRoute from './common/PrivateRoute'
+
 import AddQuestion from './components/AddQuestion'
 import {connect} from 'react-redux'
 import {handleInitialData} from "./actions/shared"
@@ -71,11 +71,16 @@ class App extends Component {
                           path="/questions/:id"
                           component={QuestionPage}
                         />
-                      
+
                         <Route
                            exact
                             path="/"
                             component={NavTabs}
+                          />
+                          <Route
+                             exact
+                              path="*"
+                              component={PageNotFound}
                           />
 
 

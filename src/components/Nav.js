@@ -34,7 +34,7 @@ class Nav extends React.Component {
 
   state = {
     //auth: this.props.authUserID !== '',
-    anchorEl: "",
+    anchorEl: null,
   };
 
   handleMenu = (e) => {
@@ -120,6 +120,7 @@ class Nav extends React.Component {
                   imageURL={authUserURL}
                   userName={authUserName}
                 />
+                {authUserName}
               </div>}
           </Toolbar>
         </AppBar>
